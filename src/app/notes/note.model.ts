@@ -1,5 +1,7 @@
-export interface Note { 
-  id: string;
-  title: string;
-  content: string;  
+export class Note { 
+  
+  constructor(
+    public id: string
+    , public title: string
+    , public content: string){}
 }

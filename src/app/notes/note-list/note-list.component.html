@@ -1,1 +1,17 @@
-<p>note-list works!</p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+    <div class="row pad-left-right">
+      <span class="pull-left title">Add Notes</span>
+      <a class="btn btn-success pull-right" [routerLink]="['/note/new']" >Add Note</a>
+      </div>
+      </div>
+    <div class="panel-body">
+    <div class="center-panel">
+    <!--Add tag to display a list of NoteItem components-->
+    <app-note
+        *ngFor="let note of notes"
+        [note]="note">
+    </app-note>    </div>
+    </div>
+    
+    </div>

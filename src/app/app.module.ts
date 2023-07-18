@@ -10,14 +10,17 @@ import { QuizListComponent } from './quiz/quiz-list/quiz-list.component';
 import { QuizDetailComponent } from './quiz/quiz-detail/quiz-detail.component';
 import { QuizEditComponent } from './quiz/quiz-edit/quiz-edit.component';
 import { NotesComponent } from './notes/notes.component';
-import { NoteComponent } from './notes/note/note.component';
 import { TestsComponent } from './tests/tests.component';
 import { TestListComponent } from './tests/test-list/test-list.component';
 import { TestComponent } from './tests/test/test.component';
 import { NoteEditComponent } from './notes/note-edit/note-edit.component';
 import { NoteDetailComponent } from './notes/note-detail/note-detail.component';
 import { NoteListComponent } from './notes/note-list/note-list.component';
+import { NoteItemComponent } from './notes/note-item/note-item.component'
 import { TestTakeComponent } from './tests/test-take/test-take.component';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { QuizItemComponent } from './quiz/quiz-item/quiz-item.component';
 
 @NgModule({
   declarations: [
@@ -30,20 +33,20 @@ import { TestTakeComponent } from './tests/test-take/test-take.component';
     QuizDetailComponent,
     TestComponent,
     NotesComponent,
-    NoteEditComponent,
-    NoteDetailComponent,
-    NoteListComponent,
-    NoteComponent,
     TestsComponent,
     TestListComponent,
     NoteEditComponent,
     NoteDetailComponent,
     NoteListComponent,
-    TestTakeComponent
+    NoteItemComponent,
+    TestTakeComponent,
+    QuizItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

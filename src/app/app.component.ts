@@ -8,13 +8,5 @@ import * as bootstrap from 'bootstrap';
 })
 export class AppComponent {
   title = 'memorization';
-  @ViewChild('helloModal') helloEl?: ElementRef;
-  modal?: bootstrap.Modal;
-  ngAfterViewInit() {
-    this.modal = new bootstrap.Modal(this.helloEl?.nativeElement, {});
-  }
- 
-  trigger() {
-    this.modal?.toggle();
-  }
+
 }

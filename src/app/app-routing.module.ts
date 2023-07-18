@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizEditComponent } from './quiz/quiz-edit/quiz-edit.component';
-import { NoteComponent } from './notes/note/note.component';
+import { NoteItemComponent } from './notes/note-item/note-item.component';
 import { NoteEditComponent } from './notes/note-edit/note-edit.component';
 import { NoteDetailComponent } from './notes/note-detail/note-detail.component';
 import { QuizDetailComponent } from './quiz/quiz-detail/quiz-detail.component';
@@ -10,6 +10,7 @@ import { TestComponent } from './tests/test/test.component';
 import { TestTakeComponent } from './tests/test-take/test-take.component';
 import { TestListComponent } from './tests/test-list/test-list.component';
 import { HomeComponent } from './home/home.component';
+import { NotesComponent } from './notes/notes.component';
 
 
 const routes: Routes = [
@@ -18,25 +19,25 @@ const routes: Routes = [
     component: QuizComponent,
     children: [
       {path: 'new', component: QuizEditComponent}
-    , {path: 'id', component: QuizDetailComponent}
-    , {path: 'id/edit', component: QuizEditComponent}
+    , {path: ':id', component: QuizDetailComponent}
+    , {path: ':id/edit', component: QuizEditComponent}
     ]
 
   },
   {
       path: 'note'
-    , component: NoteComponent
+    , component: NotesComponent
     , children: [
         {path: 'new', component: NoteEditComponent}
-      , {path: 'id', component: NoteDetailComponent}
-      , {path: 'id/edit', component: NoteEditComponent}
+      , {path: ':id', component: NoteDetailComponent}
+      , {path: ':id/edit', component: NoteEditComponent}
     ]
   },
   {
     path: 'test', component: TestComponent,
     children: [
       {path: 'id', component: TestTakeComponent},
-      {path: '', component: TestListComponent}
+      {path: 'list', component: TestListComponent}
     ]
   },
   {path: '', component: HomeComponent},
